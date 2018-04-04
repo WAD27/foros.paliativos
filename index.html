@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VI Foro de Cuidados Paleativos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+	body{ background-color: #1f2532; color: #fff; font-family: 'Roboto', sans-serif;}
+	#encabezado{ height: 118px;}
+	#logo{ display: inline-block; margin-top: 53px; margin-left: 25px;}
+	#menu{ display: inline-block; float: right; margin-right: 100px;}
+	.menus{ display: inline-block; margin-top: 40px; padding: 10px; cursor: pointer;}
+	.menus:hover{ border-bottom: 4px solid #3dbdb6;}
+	#inicio{ border-bottom: 4px solid #3dbdb6; }
+	#cartel{ width: 100%; height: 756px; background-image: url("img/cartel.jpg"); background-size: 100%; background-repeat: no-repeat;}
+	.footers{ display: inline-block; }
+	#titulo_footer{ margin-left: 25px;}
+	#derechos{ margin-left: 25px;}
+	#redes{ margin-left: 35px; margin-top: 25px;}
+	#contacto_screen{ display: none; padding-left: 50px; background-color: #fff; color: #000;}
+	#division{ color: #3dbdb6; }
+/* phone */
+	@media (max-device-width : 500px){
+		#menu{ display: lock; float: right; }
+		#cartel{ width: 100%; height: 756px; background-image: url("img/cartel.jpg"); background-size: 100%; background-repeat: no-repeat;}
+		#contacto_info{
+			font-size: 18px;
+			width: 90%;
+			margin-left: 0%;
+		}
+		.fas{
+			margin-right: 18px;
+		}
+		#contacto_form{
+			display: block;
+			font-size: 15px;
+		    width: 90%;
+		    margin-top: 0px;
+		    margin-left: 0%;
+		}
+		#correo{
+			width:100%;
+			font-size: 45px;
+		}
+		#mensaje{
+		    width: 100%;
+			font-size: 35px;
+		    padding: 12px 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+		#enviar{ 
+			width: 180px;
+		    height: 73px;
+		    background-color: #3dbdb6;
+		    color: #fff;
+		    cursor: pointer;
+		    border-radius: 4px;
+		    font-size: 35px;
+		}
+	}
+/* ipad */
+	@media (min-device-width : 501px) and (max-device-width : 700px) {
+		#cartel{ height: 756px; }
+		#division{ color: #3dbdb6; }
+		#contacto_info{ position: relative; display: inline-block; width:48%; }
+		#contacto_form{
+			width: 48%;
+			margin-left: 45%;
+			margin-top: -328px;
+		}
+		.fas{ margin-right: 35px; }
+		input[type=text] {
+		    width: 100%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		#mensaje{
+		    width: 100%;
+		    padding: 12px 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+		#enviar{ display: block; margin: auto; width: 180px; height: 32px; background-color: #3dbdb6; color: #fff; cursor:pointer; border-radius: 4px;}
+	}
+/* Desktops and laptops ----------- */
+	@media (min-device-width : 700px) {
+		#contacto_info{ position: relative; display: inline-block; width:48%; }
+		#contacto_form{
+			width: 48%;
+			margin-left: 45%;
+			margin-top: -328px;
+		}
+		.fas{
+			margin-right: 5px;
+		}
+		input[type=text] {
+		    width: 100%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		#correo{
+			font-size: 15px;
+		}
+		#mensaje{
+		    width: 100%;
+			font-size: 15px;
+		    padding: 12px 20px;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		}
+		#enviar{ display: block; margin: auto; width: 180px; height: 32px; background-color: #3dbdb6; color: #fff; cursor:pointer; border-radius: 4px; font-size: 15px;}
+	}
+</style>
+<script>
+$( document ).ready(function(){
+	$("#inicio_menu").click(function(){
+		$(".screens").hide()
+		$("#inicio_screen").show()
+	})//inicio
+	
+	$("#registro_menu").click(function() {
+		window.open("https://docs.google.com/forms/d/17hmdcY0_RC_Liqv8o5-7kXNlnXTScvdkr_8D2oxL234/viewform?ts=5aa73ce9");
+	})//registro_menu
+	
+	$("#programa_menu").click(function(){
+
+	})//programa_menu
+	$("#contacto_menu").click(function(){
+		$(".screens").hide()
+		$("#contacto_screen").show()
+	})//contacto_menu
+})//document ready
+</script>
+</head>
+<body>
+	<div id="encabezado">
+		<div id="logo" class="titulo">VI FORO DE CUIDADOS PALIATIVOS</div>
+		<div id="menu">
+			<div id="inicio_menu" class="menus">Inicio</div>
+			<div id="registro_menu" class="menus">Registro</div>
+			<div id="programa_menu" class="menus">Programa</div>
+			<div id="contacto_menu" class="menus">Contacto</div>
+		</div><!--//menus -->
+	</div><!--//encabezado-->
+	<div id="inicio_screen" class="screens">
+		<div id="cartel"></div><!--//cartel -->
+	</div><!--//inicio_screen -->
+	<div id="contacto_screen" class="screens">
+		<div id="contacto_info">
+			<h2>CONTÁCTANOS</h2><br>
+			<div id="division">División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</div><!--//division--><br>
+			<p>
+				<i class="fas fa-map-marker-alt"></i><span> Calzada de Tlalpan 4800, col. Sección XVI,<br>Tlalpan, Ciudad de México, 14080</span><br><br>
+				<i class="fas fa-phone"></i><span> Tel. 4000-3000 ext 8010 y 8017</span><br><br>
+				<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
+			</p>
+		</div><!--//contacto_info-->
+		<div id="contacto_form">
+			<br><br><br>
+			<form action="mail_contact.php">
+			  <input type="text" id="correo" name="correo" value="Correo electrónico" >
+			  <br><br>
+			  <textarea id="mensaje" name="mensaje" rows="7">Mensaje</textarea>
+			  <br><br>
+			  <input id="enviar" type="submit" value="Enviar">
+			</form>
+			<br><br><br><br>
+		</div><!--//contacto_form -->
+	</div><!--//contacto_screen -->
+	<div id="footer">
+		<div id="titulo_footer" class="footers">VI FORO DE CUIDADOS PALIATIVOS</div>
+		<div id="derechos" class="footers">Todos los derechos reservados VI Foro Cuidados Paleativos 2018</div>
+		<div id="redes" class="footers">
+			<div id="twitter" class="footers"><i class="fab fa-facebook-square fa-lg"></i></div>
+			<div id="facebook" class="footers"><i class="fab fa-twitter-square fa-lg"></i></div>
+		</div>
+	</div><!--//footer -->
+</body>
+</html>
