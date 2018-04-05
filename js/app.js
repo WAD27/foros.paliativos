@@ -2,14 +2,18 @@ $(document).foundation();
 //
 $(document).ready(function() {
 
+  var menuItems = [$("#inicio_menu"),$("#programa_menu"),$("#contacto_menu")]
+
   imgLiquid()
 
+  menuItems[0].css('border-bottom','4px solid #3dbdb6')
   // secciones
   $("#inicio_menu").on('click',function() {
 
     $(".screens").hide()
-    // $(".screens").on('hide')
     $("#inicio_screen").show()
+    estado_boton_menu(menuItems)
+    menuItems[0].css('border-bottom','4px solid #3dbdb6')
 
   })//inicio
 
@@ -23,6 +27,8 @@ $(document).ready(function() {
 
     $(".screens").hide()
     $("#programa").show()
+    estado_boton_menu(menuItems)
+    menuItems[1].css('border-bottom','4px solid #3dbdb6')
 
   })//programa_menu
 
@@ -30,10 +36,18 @@ $(document).ready(function() {
 
     $(".screens").hide()
     $("#contacto_screen").show()
+    estado_boton_menu(menuItems)
+    menuItems[2].css('border-bottom','4px solid #3dbdb6')
 
   })//contacto_menu
 
 })//ready
+
+function estado_boton_menu(menuItems) {
+  $.each(menuItems,function() {
+    $(this).css('border-bottom','0px')
+  })
+}
 
 function imgLiquid() {
 
