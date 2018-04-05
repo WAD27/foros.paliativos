@@ -1,10 +1,11 @@
 $(document).foundation();
 //
-$( document ).ready(function() {
+$(document).ready(function() {
 
-imgLiquid()
 
-// secciones
+  imgLiquid()
+
+  // secciones
   $("#inicio_menu").click(function(){
 
     $(".screens").hide()
@@ -32,7 +33,7 @@ imgLiquid()
 
   })//contacto_menu
 
-})//
+})//ready
 
 function imgLiquid() {
 
