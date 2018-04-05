@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<title>VI Foro de Cuidados Palativos</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="assets/styles.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"> -->
+	<link rel="icon" type="image/png" href="assets/favicon.png" />
+	<!--  -->
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<nav id="encabezado">
+	<header id="encabezado">
 
 		<div id="logo" class="titulo">
 			<div id="logo-texto" class="titulo">
@@ -17,7 +19,7 @@
 			</div>
 		</div>
 
-		<div id="menu">
+		<nav id="menu">
 
 			<ul id="menu-lista">
 
@@ -28,13 +30,13 @@
 
 			</ul>
 
-		</div>
+		</nav>
 
-	</nav>
+	</header>
 
 	<section id="inicio_screen" class="screens">
-		<div id="cartel"></div><!--//cartel -->
-	</section><!--//inicio_screen -->
+		<div id="cartel"></div>
+	</section>
 
 	<section id="programa" class="screens">
 
@@ -58,6 +60,7 @@
 				<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
 			</p>
 		</div><!--//contacto_info-->
+
 		<div id="contacto_form">
 			<br><br><br>
 			<form action="mail_contact.php">
@@ -68,16 +71,19 @@
 				<input id="enviar" type="submit" value="Enviar">
 			</form>
 			<br><br><br><br>
-		</section><!--//contacto_form -->
-	</div><!--//contacto_screen -->
-	<div id="footer">
-		<div id="titulo_footer" class="footers">VI FORO DE CUIDADOS PALIATIVOS</div>
-		<div id="derechos" class="footers">Todos los derechos reservados VI Foro Cuidados Paliativos 2018</div>
-		<div id="redes" class="footers">
-			<div id="twitter" class="footers"><i class="fab fa-facebook-square fa-lg"></i></div>
-			<div id="facebook" class="footers"><i class="fab fa-twitter-square fa-lg"></i></div>
 		</div>
-	</div><!--//footer -->
+	</section>
+
+	<footer id="footer">
+		<div id="titulo_footer" class="footer-item">VI FORO DE CUIDADOS PALIATIVOS</div>
+		<div id="derechos" class="footer-item">Todos los derechos reservados VI Foro Cuidados Paliativos 2018</div>
+		<div id="redes" class="footer-item">
+			<div id="twitter" class="footer-item"><i class="fab fa-facebook-square fa-lg"></i></div>
+			<div id="facebook" class="footer-item"><i class="fab fa-twitter-square fa-lg"></i></div>
+		</div>
+	</footer>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/imgLiquid/js/imgLiquid-min.js"></script>
+	<script src="js/app.js"></script>
 </body>
-<script src="assets/scripts.js"></script>
 </html>
