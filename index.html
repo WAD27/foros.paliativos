@@ -1,59 +1,91 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>VI Foro de Cuidados Palativos</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"> -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VI Foro Paliativo</title>
 	<link rel="icon" type="image/png" href="assets/favicon.png" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<!--  -->
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header id="encabezado">
+	<header id="encabezado" class="cell">
 
-		<div id="logo" class="titulo">
-			<div id="logo-texto" class="titulo">
-				<a href="index.html">VI FORO DE CUIDADOS PALIATIVOS</a>
+		<div class="grid-container">
+
+			<div id="logo" class="titulo grid-x small-6 medium-5">
+				<div id="logo-texto" class="titulo">
+					<a href="index.html">VI FORO DE CUIDADOS PALIATIVOS</a>
+				</div>
 			</div>
+
+			<nav id="menu" class="grid-x small-6 medium-7">
+
+				<ul id="menu-lista">
+
+					<li id="inicio_menu" class="menus">Inicio</li>
+					<li id="registro_menu" class="menus">Registro</li>
+					<li id="programa_menu" class="menus">Programa</li>
+					<li id="contacto_menu" class="menus">Contacto</li>
+
+				</ul>
+
+			</nav>
+
 		</div>
-
-		<nav id="menu">
-
-			<ul id="menu-lista">
-
-				<li id="inicio_menu" class="menus">Inicio</li>
-				<li id="registro_menu" class="menus">Registro</li>
-				<li id="programa_menu" class="menus">Programa</li>
-				<li id="contacto_menu" class="menus">Contacto</li>
-
-			</ul>
-
-		</nav>
 
 	</header>
+	<!-- fondo degradado -->
+	<div id="fondo-degradado" class="grid-x"></div>
+	<!--  -->
+	<section id="inicio_screen" class="grid-container screens ha">
 
-	<section id="inicio_screen" class="screens h-seccion">
-		<div id="cartel" class="imgLiquid imgLiquidFill">
+		<div id="cartel" class="grid-x h-seccion imgLiquid imgLiquidNoFill">
 			<img src="assets/heroscreen.png" alt="Foros Paliativos home page">
 		</div>
+
+		<div id="logos-cartel" class="grid-x">
+
+			<div class="cell small-12 medium-4 h-logos">
+				<div class="grid-x imgLiquid imgLiquidNoFill">
+					<img src="assets/gea-logo.png" alt="Hospital GEA">
+				</div>
+			</div>
+			<!--  -->
+			<div class="cell small-12 medium-4 h-logos">
+				<div class="grid-x imgLiquid imgLiquidNoFill">
+					<img src="assets/ALC-logo.png" alt="ALC">
+				</div>
+			</div>
+			<!--  -->
+			<div class="cell small-12 medium-4 h-logos">
+				<div class="grid-x imgLiquid imgLiquidNoFill">
+					<img src="assets/facu-psci-logo.png" alt="">
+				</div>
+			</div>
+
+		</div>
+
 	</section>
 
-	<section id="programa" class="screens">
+	<section id="programa" class="grid-container screens">
 
-		<div class="pdf">
+		<div class="grid-x pdf">
 			<center>
 				<object data="assets/vi.foro.de.cuidados.paliativos.pdf" type="application/pdf">
-					alt : <a href="pdf_file_name.pdf">PDF TITLE</a>
+					alt : <a href="assets/vi.foro.de.cuidados.paliativos.pdf">Cuidados Paliativos</a>
 				</object>
 			</center>
 		</div>
 
 	</section><!--//inicio_screen -->
 
-	<section id="contacto_screen" class="screens">
-		<div id="contacto_info">
+	<section id="contacto_screen" class="grid-container screens">
+		<div id="contacto_info" class="grid-x small-12 medium-7">
 			<h2>CONTÁCTANOS</h2><br>
 			<div id="division">División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</div><!--//division--><br>
 			<p>
@@ -63,7 +95,7 @@
 			</p>
 		</div><!--//contacto_info-->
 
-		<div id="contacto_form">
+		<div id="contacto_form" class="grid-x small-12 medium-5">
 			<br><br><br>
 			<form action="mail_contact.php">
 				<input type="text" id="correo" name="correo" value="Correo electrónico" >
@@ -76,17 +108,32 @@
 		</div>
 	</section>
 
-	<footer id="footer">
-		<div id="titulo_footer" class="footer-item">VI FORO DE CUIDADOS PALIATIVOS</div>
-		<div id="derechos" class="footer-item">Todos los derechos reservados VI Foro Cuidados Paliativos 2018</div>
-		<div id="redes" class="footer-item">
-			<div id="twitter" class="footer-item"><i class="fab fa-facebook-square fa-lg"></i></div>
-			<div id="facebook" class="footer-item"><i class="fab fa-twitter-square fa-lg"></i></div>
+	<footer id="footer" class="cell">
+		<div class="grid-container">
+
+			<div id="titulo_footer" class="small-12 medium-3 grid-x footer-item align-middle">
+				<div class="cell ha footer-item-center">
+
+					VI FORO DE CUIDADOS PALIATIVOS
+
+				</div>
+			</div>
+
+			<div id="derechos" class="small-12 medium-3 grid-x footer-item calign-center">
+				<small>Todos los derechos reservados VI Foro Cuidados Paliativos 2018</small>
+			</div>
+
+			<div id="redes" class="small-12 medium-3 grid-x footer-item">
+				<a href="https://www.facebook.com/Paliativos-Gea-287755225035641/" target="_blank"><div id="facebook" class="footer-item"><i class="fab fa-facebook fa-lg"></i></div></a>
+			</div>
+
 		</div>
 	</footer>
 
 	<!--  -->
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/what-input/dist/what-input.js"></script>
+	<script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
 	<script src="bower_components/imgLiquid/js/imgLiquid-min.js"></script>
 	<script src="js/app.js"></script>
 </body>

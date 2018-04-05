@@ -50,11 +50,10 @@
 // @include foundation-float-classes;
 // @include foundation-prototype-classes;
 //
-@import "../bower_components/fontawesome/web-fonts-with-css/scss/fontawesome";
+// @import "../bower_components/fontawesome/web-fonts-with-css/scss/fontawesome";
 // estilos agregados
-/*  */
+/**/
 body {
-  background-color: #1f2532;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   margin:0;
@@ -79,10 +78,11 @@ body {
 /**/
 #encabezado {
   height: 85px;
+  background-color: #1f2532;
   #logo{
     display: inline-block;
     justify-content: left;
-    margin-left: 50px;
+    // margin-left: 50px;
     height: 100%;
     width: 45%;
     #logo-texto {
@@ -94,7 +94,7 @@ body {
   #menu {
     display: inline-block;
     float: right;
-    margin-right: 50px;
+    // margin-right: 50px;
     height: 100%;
     width: 45%;
     #menu-lista {
@@ -116,6 +116,9 @@ body {
     }
   }
 }
+#inicio_screen {
+  padding: 16px;
+}
 #cartel{
   width: 100%;
   // height: 756px;
@@ -135,26 +138,68 @@ body {
 #division{
   color: #3dbdb6;
 }
-.pdf {background: gray;}
+.pdf {background: #0caeb4;}
 footer {
   min-height: 85px;
-  // #redes{ margin-left: 35px; margin-top: 25px;}
-  // #derechos{ margin-left: 25px;}
-  // #titulo_footer{ margin-left: 25px;}
+  background-color: #1f2532;
   .footer-item {
     display: inline-block;
+    justify-content: left;
+    height: 85px;
+    padding-top: 15px;
+    width:29%;
+    &.footer-item-center {
+////
+    }
+  }
+  #derechos {
+    text-align: center;
+    width:49%;
+    &small {
+      font-weight: lighter;
+    }
+  }
+  #redes {
+    text-align: right;
+    // margin-right: 32px;
+    width:19%;
   }
 }
-// degradado
-// Degradado radial:
-// #55d0d4 color centro
-// #0caeb4
+#fondo-degradado {
+  background-image: radial-gradient(ellipse, #55d0d4 20%, #0caeb4 60%);
+  @extend .z-1;
+  @extend .fixed;
+  width: 100%;
+  height: 100vh;
+}
 
-//altura
+//custom
+.ha {
+  height: auto;
+}
 .h-seccion {
   height: 90vh;
 }
-
+.h-logos {
+  height: 100px;
+  padding: 16px;
+}
+.abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.rel {
+  position: relative;
+}
+.z-1 {
+  z-index: -1;
+}
 /* phone */
 @media (max-device-width : 500px){
   #menu{ display: lock; float: right; }
