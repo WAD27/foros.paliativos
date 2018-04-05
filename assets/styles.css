@@ -1,10 +1,45 @@
-/**/
+/*  */
 body{ background-color: #1f2532; color: #fff; font-family: 'Roboto', sans-serif;}
 object {width: 90%; min-height:640px; height: 100%}
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+a:hover {color: whitesmoke;}
+/*  */
 #encabezado{ height: 100px;}
-#logo{ display: inline-block; margin-top: 53px; margin-left: 25px;}
-#menu{ display: inline-block; float: right; margin-right: 100px;}
-.menus{ display: inline-block; margin-top: 40px; padding: 10px; cursor: pointer;}
+#logo{
+  display: inline-block;
+  justify-content: left;
+  margin-left: 25px;
+  height: 100%;
+  width: 45%;
+}
+#logo-texto {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#menu {
+  display: inline-block;
+  float: right;
+  margin-right: 25px;
+  height: 100%;
+  width: 45%;
+}
+#menu-lista {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 0;
+  height: 100%;
+}
+.menus{
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
 .menus:hover{ border-bottom: 4px solid #3dbdb6;}
 .menus:active, .menus:focus { border-bottom: 4px solid #3dbdb6;}
 #inicio{ border-bottom: 4px solid #3dbdb6; }
