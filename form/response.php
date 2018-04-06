@@ -1,0 +1,26 @@
+<?php
+
+
+if($_SERVER["REQUEST_METHOD"] === "POST") {
+
+	if(isset($_POST['contactFormSubmitted'])) {
+    $email = $_POST['correo'];
+			$mensaje = $_POST['mensaje'];
+
+			if (strlen($name) < 3) {
+				exit("Necesitamos más caracteres en tu nombre.");
+			}
+			 else if (strlen($phone) < 10) {
+					exit("Necesitamos 10 números en tu teléfono.");
+			}
+
+			$formcontent="Te estan contactando desde tu sitio \n\nNombre: $name\n\nApellido: $secondname\n\nInterés: $interest\n\nTeléfono: $phone\n\nCorreo: $email\n\n";
+			$message = wordwrap($formcontent, 70, "\r\n");
+			$recipient = "";//correo aqui
+			$subject = $name . " " . $secondname . " para $interest";
+			$mailheader = "De: $email \r\n";
+			mail($recipient, $subject, $message, $mailheader) or die("Algo ha salido mal, intente nuevamente.");
+			echo "<script>$('#formResponse').html('Gracias! tu correo se ha enviado exitosamente.'); </script>";
+		}
+
+}

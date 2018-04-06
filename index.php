@@ -102,7 +102,7 @@
 				<br>
 				<br>
 				<br>
-				<form action="mail_contact.php">
+				<form action="-form/response.php">
 					<input type="text" id="correo" name="correo" placeholder="Correo Electrónico">
 					<br><br>
 					<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje">Mensaje</textarea>
