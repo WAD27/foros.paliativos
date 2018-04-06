@@ -77,6 +77,20 @@ body {
   center {
     width: 100%;
   }
+  input, textarea  {
+    border: 1px solid lightgray;
+    color: lightgray;
+  }
+  #enviar{
+    display: block;
+    margin: auto;
+    font-size: 12px;
+    padding: 20px 0;
+    width: 180px;
+    background-color: #3dbdb6;
+    color: #fff;
+    cursor:pointer;
+    }
 }
 /**/
 #encabezado {
@@ -131,12 +145,16 @@ body {
 }
 #contacto_screen{
   display: none;
-  padding-left: 50px;
+  padding: 50px 0;
   background-color: #fff;
   color: #000;
 }
+#info-contacto {
+  font-size: 22px;
+}
 #division{
   color: #3dbdb6;
+  font-size: 22px;
 }
 .pdf {background: #0caeb4;}
 footer {
@@ -149,7 +167,7 @@ footer {
     padding-top: 25px;
     width:29%;
     &.footer-item-center {
-////
+      ////
     }
   }
   #derechos {
@@ -179,6 +197,9 @@ footer {
 }
 .h-seccion {
   height: 90vh;
+}
+.h-contacto {
+  min-height: 90vh;
 }
 .h-logos {
   height: 100px;
@@ -215,9 +236,7 @@ footer {
   #contacto_form{
     display: block;
     font-size: 15px;
-    width: 90%;
-    margin-top: 0px;
-    margin-left: 0%;
+    // width: 90%;
   }
   #correo{
     width:100%;
@@ -234,81 +253,58 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  #enviar{
-    width: 180px;
-    height: 73px;
-    background-color: #3dbdb6;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 35px;
-  }
+
 }
 /* ipad */
 @media (min-device-width : 320px) and (max-device-width : 640px) {
   #cartel{ height: 756px; }
+
   #division{ color: #3dbdb6; }
-  #contacto_info{ position: relative; display: inline-block; width:48%; }
-  #contacto_form{
-    width: 48%;
-    margin-left: 45%;
-    margin-top: -328px;
-  }
+
   .fas{ margin-right: 35px; }
   input[type=text] {
-    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    width: 100%;
   }
   #mensaje{
     width: 100%;
     padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  #enviar{ display: block; margin: auto; width: 180px; height: 32px; background-color: #3dbdb6; color: #fff; cursor:pointer; border-radius: 4px;}
-}
-/* Desktops and laptops ----------- */
-@media (min-device-width : 960px) {
-  #contacto_info{ position: relative; display: inline-block; width:48%; }
-  #contacto_form{
-    width: 48%;
-    margin-left: 45%;
-    margin-top: -328px;
   }
-  .fas{
-    margin-right: 5px;
+  /* Desktops and laptops ----------- */
+  @media (min-device-width : 960px) {
+
+    .fas{
+      margin-right: 5px;
+    }
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    #correo{
+      font-size: 15px;
+    }
+    #mensaje{
+      width: 100%;
+      font-size: 15px;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
   }
-  input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  #correo{
-    font-size: 15px;
-  }
-  #mensaje{
-    width: 100%;
-    font-size: 15px;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  #enviar{ display: block; margin: auto; width: 180px; height: 32px; background-color: #3dbdb6; color: #fff; cursor:pointer; border-radius: 4px; font-size: 15px;}
-}

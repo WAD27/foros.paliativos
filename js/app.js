@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     $(".screens").hide()
     $("#inicio_screen").show()
+    $('#fondo-degradado').css('display','inline')
     estado_boton_menu(menuItems)
     menuItems[0].css('border-bottom','4px solid #3dbdb6')
 
@@ -28,6 +29,7 @@ $(document).ready(function() {
     $(".screens").hide()
     $("#programa").show()
     estado_boton_menu(menuItems)
+    $('#fondo-degradado').css('display','inline')
     menuItems[1].css('border-bottom','4px solid #3dbdb6')
 
   })//programa_menu
@@ -36,6 +38,7 @@ $(document).ready(function() {
 
     $(".screens").hide()
     $("#contacto_screen").show()
+    $('#fondo-degradado').css('display','none')
     estado_boton_menu(menuItems)
     menuItems[2].css('border-bottom','4px solid #3dbdb6')
 

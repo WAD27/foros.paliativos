@@ -84,27 +84,34 @@
 
 	</section><!--//inicio_screen -->
 
-	<section id="contacto_screen" class="grid-container screens h-seccion">
-		<div id="contacto_info" class="grid-x small-12 medium-7">
-			<h2>CONTÁCTANOS</h2><br>
-			<div id="division">División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</div><!--//division--><br>
-			<p>
-				<i class="fas fa-map-marker-alt"></i><span> Calzada de Tlalpan 4800, col. Sección XVI,<br>Tlalpan, Ciudad de México, 14080</span><br><br>
-				<i class="fas fa-phone"></i><span> Tel. 4000-3000 ext 8010 y 8017</span><br><br>
-				<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
-			</p>
-		</div><!--//contacto_info-->
+	<section id="contacto_screen" class="grid-container screens h-contacto">
 
-		<div id="contacto_form" class="grid-x small-12 medium-5">
-			<br><br><br>
-			<form action="mail_contact.php">
-				<input type="text" id="correo" name="correo" value="Correo electrónico" >
-				<br><br>
-				<textarea id="mensaje" name="mensaje" rows="7">Mensaje</textarea>
-				<br><br>
-				<input id="enviar" type="submit" value="Enviar">
-			</form>
-			<br><br><br><br>
+		<div class="grid-x">
+
+			<div id="contacto_info" class="cell small-12 medium-7">
+				<h2>CONTÁCTANOS</h2><br>
+				<div id="division" class="ha"><strong>División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</strong></div><!--//division--><br>
+				<p id="info-contacto">
+					<i class="fas fa-map-marker-alt"></i><span> Calzada de Tlalpan 4800, col. Sección XVI,<br>Tlalpan, Ciudad de México, 14080</span><br><br>
+					<i class="fas fa-phone"></i><span> Tel. 4000-3000 ext 8010 y 8017</span><br><br>
+					<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
+				</p>
+			</div>
+
+			<div id="contacto_form" class="cell small-12 medium-5">
+				<br>
+				<br>
+				<br>
+				<form action="mail_contact.php">
+					<input type="text" id="correo" name="correo" placeholder="Correo Electrónico">
+					<br><br>
+					<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje">Mensaje</textarea>
+					<br><br>
+					<input id="enviar" type="submit" value="Enviar">
+				</form>
+
+			</div>
+
 		</div>
 	</section>
 
