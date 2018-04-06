@@ -109,8 +109,8 @@
 					<br><br>
 					<input id="enviar" type="submit" value="Enviar">
 					<!-- respuesta -->
-					<p id="formResponse" class="color-primario-0 pt1"><?php //if($error) { echo($error); } ?></p>
-					<p id="mensaje_res" class="success color-blanco"><i class="fa fa-success"></i></p>
+					<p id="formResponse"><?php //if($error) { echo($error); } ?></p>
+					<p id="mensaje_res" class="success"><i class="fa fa-success"></i></p>
 					<div data-abide-error class="alert callout" style="display: none;">
 						<p class="warning small_font"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
 					</div>

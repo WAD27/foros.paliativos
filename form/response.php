@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
 			$formcontent="Registro desde sitio \n\nCorreo: $email\n\nMensaje: $mensaje";
 			$message = wordwrap($formcontent, 35, "\r\n");
-			$recipient = "jazzvoon@gmail.com";
+			$recipient = "";//recipiente
 			$subject = "Contacto desde foropaliativosgea.com";
 			$mailheader = "De: $email \r\n";
 			mail($recipient, $subject, $message, $mailheader) or die("Algo ha salido mal, intente nuevamente.");

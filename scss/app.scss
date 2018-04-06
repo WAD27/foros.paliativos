@@ -221,6 +221,15 @@ footer {
 .z-1 {
   z-index: -1;
 }
+//
+#formResponse {
+  color: green;
+  margin-top: 16px
+}
+#mensaje_res {
+  color: gray;
+}
+
 /* phone */
 @media (max-device-width : 940px){
   #menu{ display: lock; float: right; }
