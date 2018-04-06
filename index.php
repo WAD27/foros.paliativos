@@ -102,12 +102,18 @@
 				<br>
 				<br>
 				<br>
-				<form action="-form/response.php">
+				<form id="formulario" action="form/response.php">
 					<input type="text" id="correo" name="correo" placeholder="Correo Electrónico">
 					<br><br>
-					<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje">Mensaje</textarea>
+					<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje"></textarea>
 					<br><br>
 					<input id="enviar" type="submit" value="Enviar">
+					<!-- respuesta -->
+					<p id="formResponse" class="color-primario-0 pt1"><?php //if($error) { echo($error); } ?></p>
+					<p id="mensaje_res" class="success color-blanco"><i class="fa fa-success"></i></p>
+					<div data-abide-error class="alert callout" style="display: none;">
+						<p class="warning small_font"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
+					</div>
 				</form>
 
 			</div>

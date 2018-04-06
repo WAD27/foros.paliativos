@@ -7,17 +7,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['correo'];
 			$mensaje = $_POST['mensaje'];
 
-			if (strlen($name) < 3) {
-				exit("Necesitamos más caracteres en tu nombre.");
-			}
-			 else if (strlen($phone) < 10) {
-					exit("Necesitamos 10 números en tu teléfono.");
-			}
-
-			$formcontent="Te estan contactando desde tu sitio \n\nNombre: $name\n\nApellido: $secondname\n\nInterés: $interest\n\nTeléfono: $phone\n\nCorreo: $email\n\n";
-			$message = wordwrap($formcontent, 70, "\r\n");
-			$recipient = "";//correo aqui
-			$subject = $name . " " . $secondname . " para $interest";
+			$formcontent="Registro desde sitio \n\nCorreo: $email\n\nMensaje: $mensaje";
+			$message = wordwrap($formcontent, 35, "\r\n");
+			$recipient = "jazzvoon@gmail.com";
+			$subject = "Contacto desde foropaliativosgea.com";
 			$mailheader = "De: $email \r\n";
 			mail($recipient, $subject, $message, $mailheader) or die("Algo ha salido mal, intente nuevamente.");
 			echo "<script>$('#formResponse').html('Gracias! tu correo se ha enviado exitosamente.'); </script>";

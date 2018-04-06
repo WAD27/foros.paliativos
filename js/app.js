@@ -5,7 +5,8 @@ $(document).ready(function() {
   var menuItems = [$("#inicio_menu"),$("#programa_menu"),$("#contacto_menu")]
 
   imgLiquid()
-
+  form_validation()
+  //
   menuItems[0].css('border-bottom','4px solid #3dbdb6')
   // secciones
   $("#inicio_menu").on('click',function() {
@@ -66,5 +67,35 @@ function imgLiquid() {
     fill:false,
     horizontalAlign:"right"
   })
+
+}
+function form_validation() {
+
+  var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+  $("#formulario").submit(function() {
+    var envio = false
+    var correo = $('#correo')
+    var mensaje = $('#mensaje')
+    if(!mensaje.val()) {
+      $("#mensaje_res").html('Falta ingresar tu mensaje');
+      return false;
+    } else if (!correo.val() || !expr.test(correo.val())) {
+          $("#mensaje_res").html('Falta el campo "Correo" o un formato admitido "@" ');
+          return false;
+        } else {envio = true}
+
+    if (envio === true) {
+      $.post('form/response.php', {
+        mensaje: mensaje.val(),
+        correo: correo.val(),
+        contactFormSubmitted: 'yes'
+      },
+      function(data) {
+        $("#mensaje_res").html(data);
+      })
+      return false
+    }
+    //
+  });
 
 }
