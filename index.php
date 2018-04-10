@@ -25,7 +25,8 @@
 
 			<nav id="menu" class="grid-x small-6 medium-7">
 
-				<ul id="menu-lista">
+				<ul id="menu-lista" class="cell hide-for-small-only">
+
 
 					<li id="inicio_menu" class="menus">Inicio</li>
 					<li id="registro_menu" class="menus">Registro</li>
@@ -34,120 +35,140 @@
 
 				</ul>
 
-			</nav>
-
-		</div>
-
-	</header>
-	<!-- fondo degradado -->
-	<div id="fondo-degradado" class="grid-x"></div>
-	<!--  -->
-	<section id="inicio_screen" class="grid-container screens ha">
-
-		<div id="cartel" class="grid-x h-seccion imgLiquid imgLiquidNoFill">
-			<img src="assets/heroscreen.png" alt="Foros Paliativos home page">
-		</div>
-
-		<div id="logos-cartel" class="grid-x">
-
-			<div class="cell small-12 medium-4 h-logos">
-				<div class="grid-x imgLiquid imgLiquidNoFill">
-					<img src="assets/gea-logo.png" alt="Hospital GEA">
-				</div>
-			</div>
-			<!--  -->
-			<div class="cell small-12 medium-4 h-logos">
-				<div class="grid-x imgLiquid imgLiquidNoFill">
-					<img src="assets/ALC-logo.png" alt="ALC">
-				</div>
-			</div>
-			<!--  -->
-			<div class="cell small-12 medium-4 h-logos">
-				<div class="grid-x imgLiquid imgLiquidNoFill">
-					<img src="assets/facu-psci-logo.png" alt="">
-				</div>
-			</div>
-
-		</div>
-
-	</section>
-
-	<section id="programa" class="grid-container screens">
-
-		<div class="grid-x pdf">
-			<center>
-				<object data="assets/vi.foro.de.cuidados.paliativos.pdf" type="application/pdf">
-					alt : <a href="assets/vi.foro.de.cuidados.paliativos.pdf">Cuidados Paliativos</a>
-				</object>
-			</center>
-		</div>
-
-	</section><!--//inicio_screen -->
-
-	<section id="contacto_screen" class="grid-container screens h-contacto">
-
-		<div class="grid-x">
-
-			<div id="contacto_info" class="cell small-12 medium-7">
-				<h2>CONTÁCTANOS</h2><br>
-				<div id="division" class="ha"><strong>División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</strong></div><!--//division--><br>
-				<p id="info-contacto">
-					<i class="fas fa-map-marker-alt"></i><span> Calzada de Tlalpan 4800, col. Sección XVI,<br>Tlalpan, Ciudad de México, 14080</span><br><br>
-					<i class="fas fa-phone"></i><span> Tel. 4000-3000 ext 8010 y 8017</span><br><br>
-					<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
-				</p>
-			</div>
-
-			<div id="contacto_form" class="cell small-12 medium-5">
-				<br>
-				<br>
-				<br>
-				<form id="formulario" action="form/response.php">
-					<input type="text" id="correo" name="correo" placeholder="Correo Electrónico">
-					<br><br>
-					<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje"></textarea>
-					<br><br>
-					<input id="enviar" type="submit" value="Enviar">
-					<!-- respuesta -->
-					<p id="formResponse"><?php //if($error) { echo($error); } ?></p>
-					<p id="mensaje_res" class="success"><i class="fa fa-success"></i></p>
-					<div data-abide-error class="alert callout" style="display: none;">
-						<p class="warning small_font"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
+				<div class="cell boton-menu-movil show-for-small-only">
+					<div class="row align-middle">
+							<a class="columns barras ha end">
+								<i class="fa fa-bars"></i>
+							</a>
 					</div>
-				</form>
+
+				</nav>
 
 			</div>
 
+		</header>
+		<!-- fondo degradado -->
+		<div id="fondo-degradado" class="grid-x"></div>
+		<!-- menu movil -->
+		<div id="menu-movil" class="grid-x">
+
+			<ul id="menu-lista-movil" class="row align-center show-for-small-only">
+
+				<li id="inicio_menu-movil" class="columns small-3 menus">Inicio</li>
+				<li id="registro_menu-movil" class="columns small-3 menus">Registro</li>
+				<li id="programa_menu-movil" class="columns small-3 menus">Programa</li>
+				<li id="contacto_menu-movil" class="columns small-3 menus">Contacto</li>
+
+			</ul>
+
 		</div>
-	</section>
+		<!--  -->
+		<section id="inicio_screen" class="grid-container screens ha">
 
-	<footer id="footer" class="cell">
-		<div class="grid-container">
+			<div id="cartel" class="grid-x h-seccion imgLiquid imgLiquidNoFill">
+				<img src="assets/heroscreen.png" alt="Foros Paliativos home page">
+			</div>
 
-			<div id="titulo_footer" class="small-12 medium-3 grid-x footer-item align-middle">
-				<div class="cell ha footer-item-center">
+			<div id="logos-cartel" class="grid-x">
 
-					VI FORO DE CUIDADOS PALIATIVOS
+				<div class="cell small-12 medium-4 h-logos">
+					<div class="grid-x imgLiquid imgLiquidNoFill">
+						<img src="assets/gea-logo.png" alt="Hospital GEA">
+					</div>
+				</div>
+				<!--  -->
+				<div class="cell small-12 medium-4 h-logos">
+					<div class="grid-x imgLiquid imgLiquidNoFill">
+						<img src="assets/ALC-logo.png" alt="ALC">
+					</div>
+				</div>
+				<!--  -->
+				<div class="cell small-12 medium-4 h-logos">
+					<div class="grid-x imgLiquid imgLiquidNoFill">
+						<img src="assets/facu-psci-logo.png" alt="">
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="programa" class="grid-container screens">
+
+			<div class="grid-x pdf">
+				<center>
+					<object data="assets/vi.foro.de.cuidados.paliativos.pdf" type="application/pdf">
+						alt : <a href="assets/vi.foro.de.cuidados.paliativos.pdf">Cuidados Paliativos</a>
+					</object>
+				</center>
+			</div>
+
+		</section><!--//inicio_screen -->
+
+		<section id="contacto_screen" class="grid-container screens h-contacto">
+
+			<div class="grid-x">
+
+				<div id="contacto_info" class="cell small-12 medium-7">
+					<h2>CONTÁCTANOS</h2><br>
+					<div id="division" class="ha"><strong>División de Clínica del Dolor y Cuidados Paliativos<br> Hospital Dr Manuel Gea González</strong></div><!--//division--><br>
+					<p id="info-contacto">
+						<i class="fas fa-map-marker-alt"></i><span> Calzada de Tlalpan 4800, col. Sección XVI,<br>Tlalpan, Ciudad de México, 14080</span><br><br>
+						<i class="fas fa-phone"></i><span> Tel. 4000-3000 ext 8010 y 8017</span><br><br>
+						<i class="fas fa-envelope"></i><span> nombre@gmail.com</span><br><br>
+					</p>
+				</div>
+
+				<div id="contacto_form" class="cell small-12 medium-5">
+					<br>
+					<br>
+					<br>
+					<form id="formulario" action="form/response.php">
+						<input type="text" id="correo" name="correo" placeholder="Correo Electrónico">
+						<br><br>
+						<textarea id="mensaje" name="mensaje" rows="7" placeholder="Mensaje"></textarea>
+						<br><br>
+						<input id="enviar" type="submit" value="Enviar">
+						<!-- respuesta -->
+						<p id="formResponse"><?php //if($error) { echo($error); } ?></p>
+						<p id="mensaje_res" class="success"><i class="fa fa-success"></i></p>
+						<div data-abide-error class="alert callout" style="display: none;">
+							<p class="warning small_font"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
+						</div>
+					</form>
 
 				</div>
+
 			</div>
+		</section>
 
-			<div id="derechos" class="small-12 medium-3 grid-x footer-item calign-center">
-				<small>Todos los derechos reservados | 2018.</small>
+		<footer id="footer" class="cell">
+			<div class="grid-container">
+
+				<div id="titulo_footer" class="small-12 medium-3 grid-x footer-item align-middle">
+					<div class="cell ha footer-item-center">
+
+						VI FORO DE CUIDADOS PALIATIVOS
+
+					</div>
+				</div>
+
+				<div id="derechos" class="small-12 medium-3 grid-x footer-item calign-center">
+					<small>Todos los derechos reservados | 2018.</small>
+				</div>
+
+				<div id="redes" class="small-12 medium-3 grid-x footer-item">
+					<a href="https://www.facebook.com/Paliativos-Gea-287755225035641/" target="_blank"><div id="facebook" class="footer-item"><i class="fab fa-facebook fa-lg"></i></div></a>
+				</div>
+
 			</div>
+		</footer>
 
-			<div id="redes" class="small-12 medium-3 grid-x footer-item">
-				<a href="https://www.facebook.com/Paliativos-Gea-287755225035641/" target="_blank"><div id="facebook" class="footer-item"><i class="fab fa-facebook fa-lg"></i></div></a>
-			</div>
-
-		</div>
-	</footer>
-
-	<!--  -->
-	<script src="node_modules/jquery/dist/jquery.js"></script>
-	<script src="node_modules/what-input/dist/what-input.js"></script>
-	<script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
-	<script src="bower_components/imgLiquid/js/imgLiquid-min.js"></script>
-	<script src="js/app.js"></script>
-</body>
-</html>
+		<!--  -->
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/what-input/dist/what-input.js"></script>
+		<script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+		<script src="bower_components/imgLiquid/js/imgLiquid-min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+	</html>

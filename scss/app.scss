@@ -7,6 +7,8 @@
 @include foundation-global-styles;
 @include foundation-visibility-classes;
 @include foundation-xy-grid-classes;
+@include foundation-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-responsive-embed;
 @include foundation-label;
@@ -15,8 +17,6 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 // Foundation No usados:
-// @include foundation-grid;
-// @include foundation-flex-grid;
 // @include foundation-button;
 // @include foundation-forms;
 // @include foundation-range-input;
@@ -80,6 +80,7 @@ body {
   input, textarea  {
     border: 1px solid lightgray;
     color: lightgray;
+    width: 100%;
   }
   #enviar{
     display: block;
@@ -90,7 +91,7 @@ body {
     background-color: #3dbdb6;
     color: #fff;
     cursor:pointer;
-    }
+  }
 }
 /**/
 #encabezado {
@@ -130,6 +131,15 @@ body {
     &:active,
     &:focus {
       border-bottom: 4px solid #3dbdb6;
+      margin-top: 4px;
+    }
+  }
+  .boton-menu-movil {
+    font-size: 2em;
+    div {
+      a {
+        text-align: right;
+      }
     }
   }
 }
@@ -138,7 +148,6 @@ body {
 }
 #cartel{
   width: 100%;
-
 }
 #programa {
   display: none;
@@ -156,7 +165,9 @@ body {
   color: #3dbdb6;
   font-size: 22px;
 }
-.pdf {background: #0caeb4;}
+.pdf {
+  background: #0caeb4;
+}
 footer {
   min-height: 85px;
   background-color: #1f2532;
@@ -173,7 +184,7 @@ footer {
   #derechos {
     text-align: center;
     width:49%;
-    &small {
+    small {
       font-weight: lighter;
     }
   }
@@ -190,7 +201,29 @@ footer {
   width: 100%;
   height: 100vh;
 }
-
+#menu-movil {
+  background-color: #0caeb4;
+  @extend .ha;
+  position: absolute;
+  z-index: -1;
+  //posicion inicial
+  transition: 0.25s;
+  -webkit-transform: translateY(-85px);
+  -moz-transform: translateY(-85px);
+  -ms-transform: translateY(-85px);
+  -o-transform: translateY(-85px);
+  transform: translateY(-85px);
+  #menu-lista-movil {
+    list-style-type: none;
+    &>li.menus {
+      padding: 16px 0;
+      font-size: 0.9em;
+      text-align: center;
+      cursor: pointer;
+      width: 110px;
+    }
+  }
+}
 //custom
 .ha {
   height: auto;
@@ -221,6 +254,12 @@ footer {
 .z-1 {
   z-index: -1;
 }
+.color-activo {
+  color: #3dbdb6;
+}
+.color-claro {
+  color: white;
+}
 //
 #formResponse {
   color: green;
@@ -231,89 +270,88 @@ footer {
 }
 
 /* phone */
-@media (max-device-width : 940px){
-  #menu{ display: lock; float: right; }
-  #cartel{ width: 100%; height: 756px; background-image: url("img/cartel.jpg"); background-size: 100%; background-repeat: no-repeat;}
-  #contacto_info{
-    font-size: 18px;
-    width: 90%;
-    margin-left: 0%;
-  }
-  .fas{
-    margin-right: 18px;
-  }
-  #contacto_form{
-    display: block;
-    font-size: 15px;
-    // width: 90%;
-  }
-  #correo{
-    width:100%;
-    font-size: 45px;
-  }
-  #mensaje{
-    width: 100%;
-    font-size: 35px;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-}
-/* ipad */
-@media (min-device-width : 320px) and (max-device-width : 640px) {
-  #cartel{ height: 756px; }
-
-  #division{ color: #3dbdb6; }
-
-  .fas{ margin-right: 35px; }
-  input[type=text] {
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 8px 0;
-    width: 100%;
-  }
-  #mensaje{
-    width: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  }
-  /* Desktops and laptops ----------- */
-  @media (min-device-width : 960px) {
-
-    .fas{
-      margin-right: 5px;
-    }
-    input[type=text] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    #correo{
-      font-size: 15px;
-    }
-    #mensaje{
-      width: 100%;
-      font-size: 15px;
-      padding: 12px 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-  }
+// @media (max-device-width : 940px){
+//   #menu{ display: lock; float: right; }
+//   #cartel{ width: 100%; height: 756px; background-image: url("img/cartel.jpg"); background-size: 100%; background-repeat: no-repeat;}
+//   #contacto_info{
+//     font-size: 18px;
+//     width: 90%;
+//     margin-left: 0%;
+//   }
+//   .fas{
+//     margin-right: 18px;
+//   }
+//   #contacto_form{
+//     display: block;
+//     font-size: 15px;
+//     // width: 90%;
+//   }
+//   #correo{
+//     width:100%;
+//     font-size: 45px;
+//   }
+//   #mensaje{
+//     width: 100%;
+//     font-size: 35px;
+//     padding: 12px 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+// }
+// /* ipad */
+// @media (min-device-width : 320px) and (max-device-width : 640px) {
+//   #cartel{ height: 756px; }
+//
+//   #division{ color: #3dbdb6; }
+//
+//   .fas{ margin-right: 35px; }
+//   input[type=text] {
+//     box-sizing: border-box;
+//     display: inline-block;
+//     padding: 12px 20px;
+//     margin: 8px 0;
+//     width: 100%;
+//   }
+//   #mensaje{
+//     width: 100%;
+//     padding: 12px 20px;
+//     box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+//   }
+//   }
+//   /* Desktops and laptops ----------- */
+//   @media (min-device-width : 960px) {
+//
+//     .fas{
+//       margin-right: 5px;
+//     }
+//     input[type=text] {
+//       width: 100%;
+//       padding: 12px 20px;
+//       margin: 8px 0;
+//       display: inline-block;
+//       border: 1px solid #ccc;
+//       border-radius: 4px;
+//       box-sizing: border-box;
+//     }
+//     #correo{
+//       font-size: 15px;
+//     }
+//     #mensaje{
+//       width: 100%;
+//       font-size: 15px;
+//       padding: 12px 20px;
+//       border: 1px solid #ccc;
+//       border-radius: 4px;
+//       box-sizing: border-box;
+//       -webkit-box-sizing: border-box;
+//       -moz-box-sizing: border-box;
+//       box-sizing: border-box;
+//     }
+//   }
