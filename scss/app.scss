@@ -190,8 +190,6 @@ footer {
   }
   #redes {
     text-align: right;
-    // margin-right: 32px;
-    width:19%;
   }
 }
 #fondo-degradado {
@@ -237,6 +235,9 @@ footer {
 .h-logos {
   height: 100px;
   padding: 16px;
+}
+.padding-x {
+  padding: 0 16px;
 }
 .abs {
   position: absolute;

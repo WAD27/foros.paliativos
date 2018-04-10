@@ -37,9 +37,9 @@
 
 				<div class="cell boton-menu-movil show-for-small-only">
 					<div class="row align-middle">
-							<a class="columns barras ha end">
-								<i class="fa fa-bars"></i>
-							</a>
+						<a class="columns barras ha end">
+							<i class="fa fa-bars"></i>
+						</a>
 					</div>
 
 				</nav>
@@ -62,8 +62,8 @@
 			</ul>
 
 		</div>
-		<!--  -->
-		<section id="inicio_screen" class="grid-container screens ha">
+		<!-- heroscreen  -->
+		<section id="inicio_screen" class="grid-container grid-padding-x screens ha">
 
 			<div id="cartel" class="grid-x h-seccion imgLiquid imgLiquidNoFill">
 				<img src="assets/heroscreen.png" alt="Foros Paliativos home page">
@@ -93,6 +93,7 @@
 
 		</section>
 
+		<!--  -->
 		<section id="programa" class="grid-container screens">
 
 			<div class="grid-x pdf">
@@ -103,11 +104,11 @@
 				</center>
 			</div>
 
-		</section><!--//inicio_screen -->
-
+		</section>
+		<!--  -->
 		<section id="contacto_screen" class="grid-container screens h-contacto">
 
-			<div class="grid-x">
+			<div class="grid-x padding-x">
 
 				<div id="contacto_info" class="cell small-12 medium-7">
 					<h2>CONTÁCTANOS</h2><br>
@@ -145,7 +146,7 @@
 		<footer id="footer" class="cell">
 			<div class="grid-container">
 
-				<div id="titulo_footer" class="small-12 medium-3 grid-x footer-item align-middle">
+				<div id="titulo_footer" class="small-12 medium-3 grid-x footer-item">
 					<div class="cell ha footer-item-center">
 
 						VI FORO DE CUIDADOS PALIATIVOS
@@ -153,12 +154,13 @@
 					</div>
 				</div>
 
-				<div id="derechos" class="small-12 medium-3 grid-x footer-item calign-center">
+				<div id="derechos" class="small-12 medium-5 grid-x footer-item align-center">
 					<small>Todos los derechos reservados | 2018.</small>
 				</div>
 
-				<div id="redes" class="small-12 medium-3 grid-x footer-item">
+				<div id="redes" class="small-12 medium-4 grid-x footer-item">
 					<a href="https://www.facebook.com/Paliativos-Gea-287755225035641/" target="_blank"><div id="facebook" class="footer-item"><i class="fab fa-facebook fa-lg"></i></div></a>
+					<a href="https://twitter.com/PaliativosGea" target="_blank"><div id="twitter" class="footer-item"><i class="fab fa-twitter fa-lg"></i></div></a>
 				</div>
 
 			</div>
