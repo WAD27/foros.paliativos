@@ -71,7 +71,7 @@
 
 			<div id="logos-cartel" class="grid-x">
 
-				<div class="cell small-12 medium-4 h-logos">
+				<div class="cell small-12 medium-6 h-logos">
 					<div class="grid-x imgLiquid imgLiquidNoFill">
 						<img src="assets/gea-logo.png" alt="Hospital GEA">
 					</div>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 			 -->
-				<div class="cell small-12 medium-4 h-logos">
+				<div class="cell small-12 medium-6 h-logos">
 					<div class="grid-x imgLiquid imgLiquidNoFill">
 						<img src="assets/facu-psci-logo.png" alt="">
 					</div>
