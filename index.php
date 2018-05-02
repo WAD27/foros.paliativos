@@ -76,13 +76,13 @@
 						<img src="assets/gea-logo.png" alt="Hospital GEA">
 					</div>
 				</div>
-				<!--  -->
+				<!--  
 				<div class="cell small-12 medium-4 h-logos">
 					<div class="grid-x imgLiquid imgLiquidNoFill">
 						<img src="assets/ALC-logo.png" alt="ALC">
 					</div>
 				</div>
-				<!--  -->
+			 -->
 				<div class="cell small-12 medium-4 h-logos">
 					<div class="grid-x imgLiquid imgLiquidNoFill">
 						<img src="assets/facu-psci-logo.png" alt="">
