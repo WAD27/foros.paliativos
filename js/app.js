@@ -24,11 +24,12 @@ $(document).ready(function() {
 
   })//inicio
 
-  $("#registro_menu, #registro_menu-movil").on('click',function() {
-
-    window.open("https://docs.google.com/forms/d/17hmdcY0_RC_Liqv8o5-7kXNlnXTScvdkr_8D2oxL234/viewform?ts=5aa73ce9");
-
-  })//registro_menu
+  // $(".registro_menu").on('click',function() {
+  // // $("#registro_menu, #registro_menu-movil").on('click',function() {
+  //
+  //   window.open("https://docs.google.com/forms/d/17hmdcY0_RC_Liqv8o5-7kXNlnXTScvdkr_8D2oxL234/viewform?ts=5aa73ce9&edit_requested=true")
+  //
+  // })//registro_menu
 
   $("#programa_menu, #programa_menu-movil").on('click',function(){
 
